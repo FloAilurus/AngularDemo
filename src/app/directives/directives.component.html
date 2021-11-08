@@ -1,0 +1,33 @@
+<h3>Directives</h3>
+<h5>NgStyle</h5>
+<p [ngStyle]="{'backgroundColor' : getColor(), 'color' : getColor()}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A maiores modi nihil nobis nostrum possimus praesentium vitae voluptatem? Ab autem deleniti iusto labore nesciunt quas sed similique tenetur voluptate voluptatibus?</p>
+<h5 [id]="monId">NgClass</h5>
+<p [ngClass]="{'paragraphe': valueProperty === 'blue'}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis ipsum libero veniam voluptates? Dolore expedita facere hic ipsum minus non numquam odit porro, quam velit. Ex nesciunt soluta tempora.</p>
+<h5>Conditionnelles</h5>
+<h6>*ngIf</h6>
+<p *ngIf="showParagraphe()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci atque, aut cupiditate deserunt dolore est exercitationem incidunt, magni modi necessitatibus nostrum nulla perferendis provident, quae quis repellat tempore veniam.</p>
+<p *ngIf="obj">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet laboriosam modi molestias nihil, optio perspiciatis praesentium quidem reprehenderit tenetur vel? Corporis culpa dignissimos eaque ex inventore, modi mollitia quaerat voluptas?</p>
+<h6>[ngSwitch]</h6>
+<div [ngSwitch]="valueProperty">
+  <p *ngSwitchCase="'blue'">ma couleur est bleu</p>
+  <p *ngSwitchCase="'red'">ma couleur est rouge</p>
+  <p *ngSwitchCase="'yellow'">ma couleur est jaune</p>
+  <p *ngSwitchCase="'green'">ma couleur est verte</p>
+  <p *ngSwitchDefault>ma couleur est noire</p>
+</div>
+<h5>Itération</h5>
+<div>
+  <div *ngFor="let u of utilisateurs; index as i; first as isFirst; last as isLast; even as isEven; odd as isOdd; count as count">
+    <p>INDEX {{i}} SUR {{count}} UTILISATEUR(S)</p>
+    <p>EST LE PREMIER ELEMENT DU TABLEAU {{isFirst}}</p>
+    <p>EST LE DERNIER ELEMENT DU TABLEAU {{isLast}}</p>
+    <p *ngIf="isEven">INDICE PAIR</p>
+    <p *ngIf="isOdd">INDICE IMPAIR</p>
+    <p>{{u.name}}</p>
+    <p>{{u.age}}</p>
+    <button (click)="u.action(valueProperty)">Lancer l'action de l'utilisateur</button>
+  </div>
+  <p>{{utilisateurs.length}}</p>
+</div>
+<h5 class="alert alert-info">Directives personnalisées (HIGHLIGHT)</h5>
+<span appHighLight>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam amet at, consequatur eveniet iste itaque, labore nobis nulla optio possimus quis repudiandae sed sequi vel veniam voluptatem voluptatibus voluptatum?</span>

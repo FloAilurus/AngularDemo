@@ -1,0 +1,15 @@
+h1 {
+  font-weight: 700;
+  color: blue;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+
+}
+li {
+  padding: 0.7em;
+}

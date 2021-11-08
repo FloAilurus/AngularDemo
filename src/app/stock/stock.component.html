@@ -1,0 +1,11 @@
+<div *ngFor="let p of products" >
+  <div *ngIf="p.quantity > 0">
+    <span>Produit {{p.id}} : </span>
+    <span>{{p.name}} </span>
+    <img src="{{p.picturePath}} " height="50">
+    <span [ngClass]="{'okStock' : p.quantity > 5, 'lowStock' : 5 > p.quantity && p.quantity > 0 }"> Il est reste : {{p.quantity}}</span>
+    <p>Effet : {{p.description}}</p>
+    <p [ngClass]="{'cheap' : p.price < 10}">Prix : {{p.price | currency : 'EUR'}}</p>
+    <button (click)="reduceQuantity(p.id)">Buy !</button>
+  </div>
+</div>

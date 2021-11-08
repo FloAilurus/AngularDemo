@@ -1,0 +1,11 @@
+<h3>Property binding</h3>
+<h5>ONE - WAY</h5>
+<p>{{messageBienvenue}}</p>
+<h5>TWO - WAY</h5>
+<input type="text" [(ngModel)]="messageBienvenue">
+<h3>Event binding</h3>
+<button (click)="showMessage(messageBienvenue)">Cliquez !</button>
+<button (click)="showMouseEvent($event)">Passage des données de l'Event</button>
+<h3>Attribute binding</h3>
+<input type="text" [value]="messageBienvenue" [disabled]="disabledButton">
+<button (click)="activeInput()">Activez-moi !</button>

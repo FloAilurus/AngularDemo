@@ -1,0 +1,9 @@
+<div class="container">
+  <h3>{{'Chronomètre' | uppercase}}</h3>
+  <p>{{hour | number : '2.0-0'}}:{{minute | number : '2.0-0'}}:{{second | number : '2.0-0'}}</p>
+  <div class="action">
+    <button [disabled]="startDisable" (click)="startChronometre()">Start</button>
+    <button [disabled]="pauseDisable" (click)="pauseChronometre()">Pause</button>
+    <button [disabled]="resetDisable" (click)="resetChronometre()">Reset</button>
+  </div>
+</div>

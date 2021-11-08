@@ -1,0 +1,19 @@
+.container {
+  padding: 0.7em;
+  border: 1px solid blue;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+p {
+  font-size: 36px;
+  font-weight: 600;
+  color: blue;
+  font-family: 'Fruktur', cursive;
+}
